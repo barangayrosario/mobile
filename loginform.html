@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="images/rosario-logo.PNG">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Keania One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="loginform.css">
+<title>Mobile Application</title>
+</head>
+<body>
+
+<div class="container">
+    <header>VOLUNTEER LOGIN FORM</header>
+    <div class="logo-form">
+        <img src="images/rosario-logo.PNG" class="header-logo" alt="">
+    </div>
+    <div class="form-container">
+        <form action="/login" method="post" id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Volunteer email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Volunteer password" required>
+            
+            <div class="show-password">
+                <input type="checkbox" id="showPasswordLogin">
+                <label for="showPasswordLogin">Show Password</label>
+            </div>
+            
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <div class="switch-form">
+            Don’t have an account? <a href="#" onclick="showRegister()">REGISTER</a>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="display: none;">
+    <header>VOLUNTEER REGISTER FORM</header>
+    <div class="logo-form">
+        <img src="images/rosario-logo.PNG" class="header-logo" alt="">
+    </div>
+    <div class="form-container">
+        <form action="/register" method="post" id="registerForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Volunteer username" required>
+            
+            <label for="emailReg">Email:</label>
+            <input type="email" id="emailReg" name="email" placeholder="Volunteer email" required>
+            
+            <label for="passwordReg">Password:</label>
+            <input type="password" id="passwordReg" name="password" placeholder="Volunteer password" required>
+            
+            <div class="show-password">
+                <input type="checkbox" id="showPasswordRegister">
+                <label for="showPasswordRegister">Show Password</label>
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+        
+        <div class="switch-form">
+            Already have an account? <a href="#" onclick="showLogin()">Login</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Switch between login and register forms
+    function showLogin() {
+        document.querySelectorAll('.container')[0].style.display = 'block';
+        document.querySelectorAll('.container')[1].style.display = 'none';
+    }
+    function showRegister() {
+        document.querySelectorAll('.container')[1].style.display = 'block';
+        document.querySelectorAll('.container')[0].style.display = 'none';
+    }
+
+    // Show/Hide password functionality
+    document.getElementById('showPasswordLogin').addEventListener('change', function() {
+        const passwordField = document.getElementById('password');
+        passwordField.type = this.checked ? 'text' : 'password';
+    });
+    
+    document.getElementById('showPasswordRegister').addEventListener('change', function() {
+        const passwordField = document.getElementById('passwordReg');
+        passwordField.type = this.checked ? 'text' : 'password';
+    });
+</script>
+
+</body>
+</html>
