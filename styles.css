@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+}
+.container {
+    width: 350px;
+    background: #10101E;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #1A8CD8;
+    overflow: hidden;
+}
+.header-logo {
+    height: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 15px #1A8CD8;
+    border-radius: 100%;
+    
+}
+.container header {
+    text-align: center;
+    padding: 20px;
+    background: #10101E;
+    color: #1A8CD8;
+    font-family: 'Keania One';
+    font-size: 20px;
+}
+.form-container {
+    padding: 35px;
+    margin-top: -2rem;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+.form-container label {
+    margin-top: 10px;
+    color: #1A8CD8;
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-size: 14px;
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: Arial;
+    outline-style: none;
+}
+.show-password {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.show-password input[type="checkbox"] {
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+.form-container .forgot-password {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 14px;
+}
+.form-container .forgot-password a {
+    color: #1A8CD8;
+    text-decoration: none;
+    background: transparent;
+    padding: 6px;
+    font-family: 'Bebas Neue';
+    transition: 0.3s;
+}
+.form-container .forgot-password a:hover {
+    transition: 0.3s;
+    color: #fff;
+}
+.forgot-password:active {
+    transform: scale(0.99);
+}
+.form-container button {
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #1A8CD8;
+    font-family: 'Bebas Neue';
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    transition: 0.3s;
+}
+.form-container button:hover {  
+    transition: 0.3s;
+    border-radius: 50px;
+}
+.form-container button:active {
+    transform: scale(0.99);
+}
+.switch-form {
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    color: #1A8CD8;
+    font-style: italic;
+    position: relative;
+    top: 15px;
+    font-family: 'Arial';
+}
+.switch-form a {
+    color: #fff;
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    text-decoration: none;
+}
